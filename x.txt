@@ -1,0 +1,7 @@
+
+$encodedScript = "PASTE_HERE_YOUR_BASE64_ENCODED_SCRIPT"
+
+
+$decodedBytes = [System.Convert]::FromBase64String($encodedScript)
+$decodedScript = [System.Text.Encoding]::UTF8.GetString($decodedBytes)
+Invoke-Expression $decodedScript
